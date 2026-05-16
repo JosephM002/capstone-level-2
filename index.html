@@ -5,9 +5,41 @@
     <script src="script.js" defer></script>
   </head>
   <body>
-    <header></header>
-    <nav></nav>
-    <main></main>
+    <header>CAPSTONE PROJECT TWl</header>
+    <nav><a href="page2.html"> Go to the next page </a></nav>
+    <main>
+      <form id="login-form">
+        <label>Username:<input id="username" name="username" /> </label>
+        <label>Password:<input id="password" name="password" /> </label>
+
+        <form>
+          <select id="choice" name="choice">
+            <optgroup label="choice1">
+              <option value="1">Option 1</option>
+              <option value="2">Option 2</option>
+            </optgroup>
+          </select>
+        </form>
+        <fieldset>
+          <legend>CHOOSE ONE</legend>
+          <input
+            type="radio"
+            name="test2"
+            for="plan-advanced1"
+            value="advanced"
+          />
+          <label id="plan-advanced1"> Happy </label>
+          <input
+            type="radio"
+            name="test2"
+            id="plan-advanced2"
+            value="advanced"
+          />
+          <label for="plan-advanced2"> Sad </label>
+        </fieldset>
+        <button id="submit">SUBMIT TO ME</button>
+      </form>
+    </main>
     <footer></footer>
   </body>
 </html>

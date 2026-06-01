@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script2.js" defer></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tw-elements/css/tw-elements.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com/3.3.0"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          fontFamily: {
+            sans: ["Roboto", "sans-serif"],
+            body: ["Roboto", "sans-serif"],
+            mono: ["ui-monospace", "monospace"],
+          },
+        },
+        corePlugins: {
+          preflight: false,
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <header>CAPSTONE PROJECT TWO</header>
+    <nav>
+      <a href="index.html"> Previous page</a>
+      <a href="page3.html"> Next page </a>
+      <!--<a href="page2.html"> Next page </a> -->
+    </nav>
+    <main>
+      <form id="login-form" class="md:text-2xl lg:text-4xl">
+        <label
+          ><p>Username: <input id="username" name="username" /></p>
+        </label>
+        <label
+          ><p>Password:<input id="password" name="password" /></p
+        ></label>
+        <div class="flex flex-col">
+          <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+            <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
+              <div class="overflow-hidden">
+                <table
+                  class="min-w-full text-left text-sm font-light text-surface dark:text-white"
+                >
+                  <thead
+                    class="border-b border-neutral-200 font-medium dark:border-white/10"
+                  >
+                    <tr>
+                      <th scope="col" class="px-6 py-4">#</th>
+                      <th scope="col" class="px-6 py-4">First</th>
+                      <th scope="col" class="px-6 py-4">Last</th>
+                      <th scope="col" class="px-6 py-4">Handle</th>
+                    </tr>
+                  </thead>
+                  <tbody class="md:text-2xl lg:text-4xl">
+                    <tr
+                      class="border-b border-neutral-200 dark:border-white/10"
+                    >
+                      <td class="whitespace-nowrap px-6 py-4 font-medium">1</td>
+                      <td class="whitespace-nowrap px-6 py-4">Mark</td>
+                      <td class="whitespace-nowrap px-6 py-4">Otto</td>
+                      <td class="whitespace-nowrap px-6 py-4">@mdo</td>
+                    </tr>
+                    <tr
+                      class="border-b border-neutral-200 dark:border-white/10"
+                    >
+                      <td class="whitespace-nowrap px-6 py-4 font-medium">2</td>
+                      <td class="whitespace-nowrap px-6 py-4">Jacob</td>
+                      <td class="whitespace-nowrap px-6 py-4">Thornton</td>
+                      <td class="whitespace-nowrap px-6 py-4">@fat</td>
+                    </tr>
+                    <tr
+                      class="border-b border-neutral-200 dark:border-white/10"
+                    >
+                      <td class="whitespace-nowrap px-6 py-4 font-medium">3</td>
+                      <td
+                        id="tablefirst3"
+                        class="whitespace-nowrap px-6 py-4"
+                      ></td>
+                      <td
+                        id="tablelast3"
+                        class="whitespace-nowrap px-6 py-4"
+                      ></td>
+                      <td
+                        id="tablehandle3"
+                        class="whitespace-nowrap px-6 py-4"
+                      ></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          type="submit"
+          id="button"
+          class="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-primary-3 transition duration-150 ease-in-out hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2 focus:outline-none focus:ring-0 active:bg-primary-600 active:shadow-primary-2 motion-reduce:transition-none dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
+        >
+          Submit to me!
+        </button>
+      </form>
+    </main>
+    <footer></footer>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/tw-elements/js/tw-elements.umd.min.js"></script>
+</html>

@@ -1,8 +1,6 @@
 <!doctype html>
 <html>
   <head>
-    <script src="script3.js" defer></script>
-    <link rel="stylesheet" href="style.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap"
       rel="stylesheet"
@@ -27,15 +25,88 @@
         },
       };
     </script>
-    <script src="script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/js/tw-elements.umd.min.js" defer></script>
+    <script src="script3.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>CAPSTONE PROJECT TWO</header>
-    <nav>
-      <a href="index.html"> First page</a>
-      <a href="page2.html"> Last page </a>
-      <!--<a href="page2.html"> Next page </a> -->
-    </nav>
+    <header>
+      <nav
+      class="flex-no-wrap relative flex w-full items-center justify-between bg-green-700 py-2 shadow-dark-mild dark:bg-neutral-700 lg:flex-wrap lg:justify-start lg:py-4"
+    >
+      <div class="flex w-full flex-wrap items-center justify-between px-3">
+        <!-- Hamburger button for mobile view -->
+        <button
+          class="block border-0 bg-transparent px-2 text-black/50 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 lg:hidden"
+          type="button"
+          data-twe-collapse-init
+          data-twe-target="#navbarSupportedContent1"
+          aria-controls="navbarSupportedContent1"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <!-- Hamburger icon -->
+          <span
+            class="[&>svg]:w-7 [&>svg]:stroke-black/50 dark:[&>svg]:stroke-neutral-200"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </span>
+        </button>
+        <h1> CATS FOR ALL </h1>
+        <h2 class="lg:hidden">Click on the 3 lines to access links</h2>
+        <!-- Collapsible navigation container -->
+        <div
+          class="!visible hidden flex-grow basis-[100%] items-center lg:!flex lg:basis-auto"
+          id="navbarSupportedContent1"
+          data-twe-collapse-item
+        >
+          </a>
+          <!-- Left navigation links -->
+          <ul
+            class="list-style-none me-auto flex flex-col ps-0 lg:flex-row"
+            data-twe-navbar-nav-ref
+          >
+            <li class="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
+              <!-- Dashboard link -->
+              <a
+                class="text-black/60 transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2"
+                href="index.html"
+                data-twe-nav-link-ref
+                >Login</a
+              >
+            </li>
+            <!-- Team link -->
+            <li class="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
+              <a
+                class="text-black/60 transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2"
+                href="page2.html"
+                data-twe-nav-link-ref
+                >Cat Pics</a
+              >
+            </li>
+            <!-- Projects link -->
+            <li class="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
+              <a
+                class="text-black/60 transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2"
+                href="page3.html"
+                data-twe-nav-link-ref
+                >Cat Facts</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+      </header>
     <main>
       <form id="form3" class="md:text-2xl lg:text-4xl">
         <label> Id: <input id="cats" /></label>
@@ -60,7 +131,7 @@
         <button
           type="submit"
           id="button"
-          class="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-primary-3 transition duration-150 ease-in-out hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2 focus:outline-none focus:ring-0 active:bg-primary-600 active:shadow-primary-2 motion-reduce:transition-none dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
+          class="inline-block rounded bg-red-700 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-primary-3 transition duration-150 ease-in-out hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2 focus:outline-none focus:ring-0 active:bg-primary-600 active:shadow-primary-2 motion-reduce:transition-none dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
         >
           Submit to me!
         </button>

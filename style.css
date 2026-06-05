@@ -33,3 +33,21 @@ h1 {
   padding-left: 25%;
   padding-right: 15%;
 }
+img {
+  width: 300px;
+  height: 200px;
+}
+
+td {
+  color: darkred;
+}
+
+tr {
+  color: darkred;
+}
+label {
+  color: darkred;
+}
+output {
+  color: darkred;
+}

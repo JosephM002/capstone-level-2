@@ -21,11 +21,15 @@ async function handleSubmit(event) {
   for (var i = 0; i < data.limit; i++) {
     const imgUrl = funFact[i].url;
     const img = document.createElement("img");
+    const fig = document.createElement("figcaption");
     img.src = imgUrl;
     img.alt = "Cat";
     img.width = 200;
     img.length = 200;
     document.body.appendChild(img);
+    document.body.appendChild(fig);
+    fig.innerText = img.alt + " " + (i + 1);
+    console.log(fig);
   }
 }
 

@@ -1,8 +1,9 @@
 const formTag2 = document.getElementById("login-form");
-formTag2.onsubmit = handleSubmit;
 const last3 = document.getElementById("tablelast3");
 const first3 = document.getElementById("tablefirst3");
 const email3 = document.getElementById("tablehandle3");
+formTag2.onsubmit = handleSubmit;
+greetUser(localStorage.getItem("name1"));
 
 async function handleSubmit(event) {
   event.preventDefault();
@@ -19,7 +20,7 @@ async function handleSubmit(event) {
     body: dataString,
   });
   const receive = await response.json();
-  if (receive.firstName === "undefined") {
+  if (receive.firstName === undefined) {
     console.log(receive.firstName);
     console.log("something went wrong");
   } else {
@@ -27,6 +28,7 @@ async function handleSubmit(event) {
     last3.innerText = receive.lastName;
     email3.innerText = receive.email;
     greetUser(receive.firstName);
+    localStorage.setItem("name1", receive.firstName);
   }
 }
 

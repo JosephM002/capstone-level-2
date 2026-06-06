@@ -1,6 +1,7 @@
 const formTag = document.getElementById("image-form");
 formTag.onsubmit = handleSubmit;
-const suc = document.getElementById("image");
+const image = document.getElementById("image");
+const caption = document.getElementById("fig");
 
 async function handleSubmit(event) {
   event.preventDefault();
@@ -10,7 +11,6 @@ async function handleSubmit(event) {
     limit: form.elements.amount.value,
   };
   const dataString = new URLSearchParams(data);
-  dataString.toString(data);
   const response = await fetch(
     "https://api.thecatapi.com/v1/images/search" + "?" + dataString,
   );
@@ -20,8 +20,11 @@ async function handleSubmit(event) {
   console.log(data.limit);
   for (var i = 0; i < data.limit; i++) {
     const imgUrl = funFact[i].url;
+    image.src = imgUrl;
+    image.innerHTML = image.src;
     const img = document.createElement("img");
     const fig = document.createElement("figcaption");
+    caption.innerText = "Cat " + (i + 1);
     img.src = imgUrl;
     img.alt = "Cat";
     img.width = 200;

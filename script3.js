@@ -39,8 +39,8 @@ async function handleSubmit(event) {
     } else {
       console.log("no");
     }
-  } catch {
-    console.log("Error!");
+  } catch (error) {
+    console.error(error);
     suc3.innerHTML = "<h1>There may have been an error. Please try again.</h1>";
   }
 }

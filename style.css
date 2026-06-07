@@ -33,9 +33,17 @@ h1 {
   padding-left: 25%;
   padding-right: 15%;
 }
-img {
+output {
+  color: darkred;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-items: center;
   width: 300px;
   height: 200px;
+}
+#login-form {
+  display: flex;
+  flex-flow: column;
 }
 #image-form {
   display: flex;
@@ -55,8 +63,5 @@ tr {
   color: darkred;
 }
 label {
-  color: darkred;
-}
-output {
   color: darkred;
 }

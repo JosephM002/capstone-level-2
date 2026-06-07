@@ -1,5 +1,6 @@
 const formTag = document.getElementById("image-form");
 formTag.onsubmit = handleSubmit;
+const output = document.getElementById("output");
 const image = document.getElementById("image");
 const caption = document.getElementById("fig");
 
@@ -18,29 +19,18 @@ async function handleSubmit(event) {
   const receive = await response.json();
   const funFact = receive;
   console.log(data.limit);
-  for (var i = 0; i < data.limit; i++) {
-    const imgUrl = funFact[i].url;
-    image.src = imgUrl;
-    const img = document.createElement("img");
-    const fig = document.createElement("figcaption");
-    caption.innerText = "Cat " + (i + 1);
-    img.src = imgUrl;
-    img.alt = "Cat";
-    img.width = 200;
-    img.length = 200;
-    document.body.appendChild(img);
-    document.body.appendChild(fig);
-    fig.innerText = img.alt + " " + (i + 1);
-    console.log(fig);
-  }
-}
-
-function addImage() {
-  for (var i = 0; i < data.limit; i++) {
-    const imgUrl = funFact[i].url;
-    const img = document.createElement("img");
-    img.src = imgUrl;
-    img.alt = "Cat";
-    document.body.appendChild(img);
+  for (let i = 0; i < data.limit; i++) {
+    let imgUrl = [];
+    imgUrl.push(funFact[i].url);
+    const source = funFact[i].url;
+    console.log(source);
+    output.innerHTML =
+      output.innerHTML +
+      '<figure class="lg:flex-row"><img id="image" src="' +
+      source +
+      '"><figcaption id="fig">' +
+      "Cat " +
+      (i + 1) +
+      "</figcaption></figure>";
   }
 }

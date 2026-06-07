@@ -2,6 +2,7 @@ const formTag2 = document.getElementById("login-form");
 const last3 = document.getElementById("tablelast3");
 const first3 = document.getElementById("tablefirst3");
 const email3 = document.getElementById("tablehandle3");
+const greet = document.getElementById("greeting");
 formTag2.onsubmit = handleSubmit;
 greetUser(localStorage.getItem("name1"));
 
@@ -34,4 +35,5 @@ async function handleSubmit(event) {
 
 function greetUser(name) {
   console.log("Hello " + name + "!");
+  greet.innerText = "Hello " + name + "!";
 }

@@ -21,7 +21,6 @@ async function handleSubmit(event) {
   for (var i = 0; i < data.limit; i++) {
     const imgUrl = funFact[i].url;
     image.src = imgUrl;
-    image.innerHTML = image.src;
     const img = document.createElement("img");
     const fig = document.createElement("figcaption");
     caption.innerText = "Cat " + (i + 1);
